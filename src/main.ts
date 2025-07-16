@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import express, {Application, Request, Response} from "express";
 import routes from "./routes/routes";
 import dotenv from "dotenv";

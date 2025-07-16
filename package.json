@@ -1,0 +1,27 @@
+{
+  "name": "cipta-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && nodemon dist/main.js",
+    "start": "node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Anjar Widiyatmoko",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^24.0.14",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/express": "^5.0.3",
+    "ts-node": "^10.9.2"
+  }
+}

@@ -8,8 +8,8 @@
 ### Langkah Instalasi
 1. Clone repository
     ```bash
-    git clone <repository-url>
-    cd ci
+    git clone git@github.com:anjarw83/cipta-api.git
+    cd cipta-api
     ```
 
 2. Install Dependecies

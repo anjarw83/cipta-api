@@ -40,6 +40,8 @@ async function login(loginDTO: LoginDTO): Promise<{ success: boolean, message?: 
             email: user.email
         }
         accessToken = await AuthService.sign(payload);
+        // save Token
+        await UserRepository.updateUserToken(user._id as string, accessToken);
         return {
             success: true,
             message: 'Login Success',

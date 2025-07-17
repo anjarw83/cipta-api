@@ -8,12 +8,12 @@ const userController = UserController();
 const transactionController = TransactionController();
 
 
-router.post("/login", userController.login);
-router.post("/register", userController.register);
+router.post("/api/v1/login", userController.login);
+router.post("/api/v1/register", userController.register);
 
 router.get('/transaction', AuthService.verifyToken, transactionController.getTransaction);
 router.post('/transaction/process', AuthService.verifyToken, transactionController.createOrUpdate);
-router.get("/user/me", userController.me);
+// router.get("/user/me", userController.me);
 
 
 export default router;

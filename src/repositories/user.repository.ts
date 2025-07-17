@@ -12,7 +12,11 @@ async function getUserByEmail(email: string): Promise<IUser|null> {
     return UserModel.findOne({email})
 }
 
+async function updateUserToken(user_id: string, token: string): Promise<void> {
+    await UserModel.findOneAndUpdate({user_id}, {token});
+}
 
-const UserRepository = { login, getUserByEmail }
+
+const UserRepository = { login, getUserByEmail, updateUserToken }
 
 export default UserRepository;

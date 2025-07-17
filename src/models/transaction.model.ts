@@ -5,7 +5,7 @@ const TransactionSchema = new Schema<ITransaction>({
     user_id: {type: String, required: true},
     amount: {type: String, required: true},
     created_at: {type: Date, required: true},
-    updated_at: {type: Date, required: false}
+    updated_at: {type: Date, required: true}
 }, {
     toJSON: {
         transform: (doc, ret) => {

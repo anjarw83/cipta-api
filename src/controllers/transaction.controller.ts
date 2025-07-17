@@ -5,7 +5,7 @@ import {IDefaultRequest} from "../common/interfaces/default.interface";
 
 async function getTransaction(req: IDefaultRequest, res: Response, next: Function) {
     const user_id = req?.user_id || 'user_id';
-    const result = await TransactionService.getTransactionListByEmail(user_id)
+    const result = await TransactionService.getTransactionListByUserId(user_id)
     return res.status(200).json({
         status: true,
         message: 'Data Found',
@@ -26,12 +26,17 @@ async function createOrUpdate(req: IDefaultRequest, res: Response, next: Functio
     }
     if(!id ){
         result = await TransactionService.create(user_id, amount);
+        return res.status(201).json({
+            status: true,
+            message: 'Data Created',
+            data: result
+        })
     }else {
         result = await TransactionService.updateByIdAndUserId(id as string, user_id, amount);
     }
-    return res.status(201).json({
+    return res.status(200).json({
         status: true,
-        message: 'Data Created',
+        message: 'Data Updated',
         data: result
     })
 }

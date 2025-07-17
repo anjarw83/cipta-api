@@ -5,6 +5,8 @@ export interface IUser {
     email: string;
     password?: string;
     token?: string;
+    createdAt?: Date;
+    updatedAt?: Date;
 }
 
 export interface IUserLogin {

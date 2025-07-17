@@ -17,6 +17,7 @@ const UserSchema = new Schema<IUser>({
 }
     },
     versionKey: false,
+    timestamps: true,
 });
 
 const UserModel = mongoose.model('User', UserSchema);

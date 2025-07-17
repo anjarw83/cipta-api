@@ -72,6 +72,7 @@ async function register(req: Request, res: Response) {
             data: user
         })
     }catch (error) {
+        console.error(error);
         return res.status(500).json({
             success: false,
             message: 'Registration Failed'

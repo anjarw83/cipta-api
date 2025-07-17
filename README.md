@@ -25,8 +25,12 @@
     MONGODB_URI=mongodb://localhost:27017
     JWT_SECRET=c8e3d6f4a1b2e9h7k5m8n3p6r9t2w4y7
     ```
+4. Run Migration Script (optional)
+   ```bash 
+   npm run migrate-up 
+   ```
 
-4. Jalankan Aplikasi
+6. Jalankan Aplikasi
     ```
     npm run start
     ```
